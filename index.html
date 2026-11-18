@@ -68,6 +68,11 @@
       padding: 0;
     }
 
+    body[data-page="home"] .home-hero .eyebrow {
+      letter-spacing: 0.16em;
+      line-height: 1.7;
+    }
+
     body[data-page="home"] .home-hero-cards {
       display: grid;
       grid-template-columns: 1fr;
@@ -133,6 +138,10 @@
     }
 
     @media (max-width: 900px) {
+      body[data-page="home"] .home-hero .eyebrow {
+        letter-spacing: 0.1em;
+      }
+
       body[data-page="home"] .home-hero .hero-bg {
         filter: contrast(1.1) saturate(1.04);
       }
@@ -157,7 +166,7 @@
         <img class="hero-bg" src="images/hero.jpg?v=5" alt="Премиальный уход и гладкая кожа" fetchpriority="high" decoding="async">
         <div class="home-hero-copy-wrap">
           <div class="hero-copy">
-            <p class="eyebrow">Москва · премиальный уход</p>
+            <p class="eyebrow">Москва · м. Пражская · ТРЦ «Колумбус»<br>премиальный уход</p>
             <h1>Гладкая кожа и ухоженные контуры</h1>
             <p class="lead">Sofia — профильная студия аппаратной косметологии в Москве. У нас работают мастера с медицинским образованием и опытом от 3 лет на современном сертифицированном оборудовании. Выберите нужное направление, чтобы узнать подробности и записаться:</p>
           </div>
