@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://vmrcompany.github.io/sofia-studio/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <image:image>
+      <image:loc>https://vmrcompany.github.io/sofia-studio/images/lazernaya-epilyaciya-vakuumnyy-massazh-moskva-prazhskaya.jpg</image:loc>
+      <image:title>Лазерная эпиляция и вакуумный массаж в Москве у м. Пражская, ТРЦ Columbus — студия Sofia</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vmrcompany.github.io/sofia-studio/laser/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <image:image>
+      <image:loc>https://vmrcompany.github.io/sofia-studio/images/lazernaya-epilyaciya-diodnyy-lazer-moskva-prazhskaya.jpg</image:loc>
+      <image:title>Лазерная эпиляция на диодном лазере в Москве м. Пражская ТРЦ Columbus — студия Sofia</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://vmrcompany.github.io/sofia-studio/images/muzhskaya-lazernaya-epilyaciya-moskva-columbus.jpg</image:loc>
+      <image:title>Мужская лазерная эпиляция в Москве у м. Пражская, ТРЦ Columbus — студия Sofia</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://vmrcompany.github.io/sofia-studio/images/lazernaya-epilyaciya-studiya-sofia-moskva.jpg</image:loc>
+      <image:title>Кабинет лазерной эпиляции студии Sofia в Москве, ТРЦ Columbus у м. Пражская</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vmrcompany.github.io/sofia-studio/massage/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <image:image>
+      <image:loc>https://vmrcompany.github.io/sofia-studio/images/vakuumnyy-massazh-moskva-prazhskaya-columbus.jpg</image:loc>
+      <image:title>Вакуумный массаж тела в Москве у м. Пражская, ТРЦ Columbus — студия Sofia</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://vmrcompany.github.io/sofia-studio/images/prajs-vakuumnyy-massazh-moskva-chertanovo.jpg</image:loc>
+      <image:title>Прайс-лист на вакуумный массаж в Москве, Чертаново, м. Пражская — студия Sofia</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vmrcompany.github.io/sofia-studio/privacy/</loc>
+    <lastmod>2026-11-18</lastmod>
+  </url>
+</urlset>
