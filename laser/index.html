@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Лазерная эпиляция в Москве — Sofia</title>
+  <meta name="description" content="Лазерная эпиляция на диодном лазере в студии Sofia: безопасно, комфортно, с охлаждением и честным курсом.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="../images/about.jpg?v=2">
+  <link rel="stylesheet" href="../styles.css?v=31">
+  <style>
+    /* Только герой услуги на /laser */
+    body[data-page="laser"] .laser-hero-accent {
+      margin: 18px 0 0;
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(1.25rem, 2.4vw, 1.7rem);
+      line-height: 1.35;
+      color: var(--gold);
+    }
+
+    /* Только блок мужской эпиляции на /laser */
+    body[data-page="laser"] .laser-men {
+      background: var(--chocolate);
+      padding: 28px 0 48px;
+    }
+
+    body[data-page="laser"] .laser-men-inner {
+      display: grid;
+      gap: 28px;
+      align-items: center;
+    }
+
+    body[data-page="laser"] .laser-men-copy h2 {
+      text-align: left;
+      margin: 0 0 18px;
+      color: var(--gold-soft);
+      font-size: clamp(2rem, 4.4vw, 3.4rem);
+    }
+
+    body[data-page="laser"] .laser-men-copy .lead {
+      margin: 0 0 18px;
+    }
+
+    body[data-page="laser"] .laser-men-copy .laser-men-list-title {
+      margin: 0 0 12px;
+      color: var(--cream);
+      font-weight: 600;
+    }
+
+    body[data-page="laser"] .laser-men-copy ul {
+      margin: 0 0 8px;
+      padding: 0 0 0 1.1em;
+      color: var(--muted);
+    }
+
+    body[data-page="laser"] .laser-men-copy li {
+      margin: 0 0 10px;
+      line-height: 1.6;
+    }
+
+    body[data-page="laser"] .laser-men-copy li::marker {
+      color: var(--gold);
+    }
+
+    body[data-page="laser"] .laser-men-copy .laser-hero-accent {
+      font-style: italic;
+    }
+
+    body[data-page="laser"] .laser-men-visual {
+      margin: 0;
+      border-radius: 36px;
+      overflow: hidden;
+    }
+
+    body[data-page="laser"] .laser-men-visual img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+      object-position: center top;
+      filter: saturate(0.92);
+    }
+
+    @media (min-width: 901px) {
+      body[data-page="laser"] .laser-men {
+        padding: 20px 0 48px;
+      }
+
+      body[data-page="laser"] .laser-men-inner {
+        grid-template-columns: 1fr minmax(280px, 42vw);
+        gap: 40px;
+        width: calc(100% - 40px);
+        max-width: none;
+        margin-left: 40px;
+        margin-right: 40px;
+        padding: 0;
+      }
+
+      body[data-page="laser"] .laser-men-visual img {
+        height: calc(88vh - 80px);
+      }
+    }
+
+    /* Только блок преимуществ на /laser */
+    body[data-page="laser"] #advantages .laser-why-lead {
+      max-width: 760px;
+      margin: 0 auto 36px;
+      text-align: center;
+      color: var(--muted);
+    }
+
+    body[data-page="laser"] #advantages .laser-why-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 28px 48px;
+    }
+
+    body[data-page="laser"] #advantages .laser-why-item {
+      margin: 0;
+      padding: 0;
+      background: none;
+      border: 0;
+      box-shadow: none;
+    }
+
+    body[data-page="laser"] #advantages .laser-why-item::before {
+      content: "";
+      display: block;
+      width: 56px;
+      height: 1px;
+      margin: 0 0 14px;
+      background: linear-gradient(90deg, var(--gold), transparent);
+    }
+
+    body[data-page="laser"] #advantages .laser-why-item h3 {
+      margin: 0 0 10px;
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(1.35rem, 2.2vw, 1.75rem);
+      font-weight: 500;
+      line-height: 1.25;
+      color: var(--gold-soft);
+    }
+
+    body[data-page="laser"] #advantages .laser-why-item p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    @media (min-width: 901px) {
+      body[data-page="laser"] #advantages .laser-why-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto;
+        grid-auto-flow: column;
+      }
+    }
+
+    /* Только прайс на /laser — пирамида по центру */
+    body[data-page="laser"] #price .laser-price-pyramid {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 16px;
+    }
+
+    body[data-page="laser"] #price .laser-price-tabs,
+    body[data-page="laser"] #price .laser-price-subtabs {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin: 0;
+      width: 100%;
+    }
+
+    body[data-page="laser"] #price .laser-price-subtabs[hidden] {
+      display: none;
+    }
+
+    body[data-page="laser"] #price .laser-price-tab {
+      appearance: none;
+      border: 1px solid rgba(201, 169, 98, 0.45);
+      background: transparent;
+      color: var(--text);
+      font: inherit;
+      font-size: 0.95rem;
+      padding: 12px 18px;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+    }
+
+    body[data-page="laser"] #price .laser-price-tab:hover {
+      border-color: var(--gold);
+      color: var(--gold-soft);
+    }
+
+    body[data-page="laser"] #price .laser-price-tab.is-active {
+      background: linear-gradient(135deg, rgba(201, 169, 98, 0.22), rgba(201, 169, 98, 0.08));
+      border-color: var(--gold);
+      color: var(--gold-soft);
+    }
+
+    body[data-page="laser"] #price .laser-price-subtabs .laser-price-tab {
+      font-size: 0.88rem;
+      padding: 10px 16px;
+    }
+
+    body[data-page="laser"] #price .laser-price-panel {
+      display: none;
+      width: 100%;
+      max-width: 640px;
+    }
+
+    body[data-page="laser"] #price .laser-price-panel.is-active {
+      display: block;
+    }
+
+    body[data-page="laser"] #price .laser-price-panel:has(.laser-price-sheet) {
+      max-width: 960px;
+      text-align: left;
+    }
+
+    body[data-page="laser"] #price .laser-price-slot:empty {
+      min-height: 0;
+    }
+
+    body[data-page="laser"] #price .laser-price-sheet {
+      position: relative;
+      margin: 8px 0 12px;
+      padding: 48px 24px 20px;
+      background: linear-gradient(180deg, #f3e2c4 0%, #e4c48a 100%);
+      color: #2b1d16;
+      border-radius: 24px;
+    }
+
+    body[data-page="laser"] #price .laser-price-close {
+      position: absolute;
+      top: 10px;
+      right: 14px;
+      width: auto;
+      height: auto;
+      padding: 0;
+      border: 0;
+      border-radius: 0;
+      background: none;
+      color: #2b1d16;
+      font-size: 1.7rem;
+      line-height: 1;
+      cursor: pointer;
+    }
+
+    body[data-page="laser"] #price .laser-price-close:hover {
+      opacity: 0.65;
+    }
+
+    body[data-page="laser"] #price .laser-price-sheet > h3 {
+      margin: 0 0 22px;
+      text-align: center;
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #2b1d16;
+    }
+
+    body[data-page="laser"] #price .laser-price-groups {
+      display: grid;
+      gap: 22px;
+    }
+
+    body[data-page="laser"] #price .laser-price-group h4 {
+      margin: 0 0 10px;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #2b1d16;
+      text-align: center;
+    }
+
+    body[data-page="laser"] #price .laser-price-group ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    body[data-page="laser"] #price .laser-price-group li {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 7px 0;
+      border-bottom: 1px solid rgba(43, 29, 22, 0.18);
+      font-size: 0.95rem;
+      line-height: 1.35;
+      color: #2b1d16;
+    }
+
+    body[data-page="laser"] #price .laser-price-group li span:last-child {
+      white-space: nowrap;
+      font-weight: 600;
+    }
+
+    @media (min-width: 901px) {
+      body[data-page="laser"] #price .laser-price-groups {
+        grid-template-columns: 1fr 1fr;
+        gap: 28px 40px;
+      }
+
+      body[data-page="laser"] #price .laser-price-group:last-child {
+        grid-column: 1 / -1;
+      }
+
+      body[data-page="laser"] #price .laser-price-sheet {
+        padding: 36px 40px 28px;
+      }
+    }
+
+    body[data-page="laser"] #price .laser-complex-table-wrap {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: thin;
+      scrollbar-color: #2b1d16 rgba(43, 29, 22, 0.16);
+    }
+
+    body[data-page="laser"] #price .laser-complex-table-wrap::-webkit-scrollbar {
+      height: 8px;
+    }
+
+    body[data-page="laser"] #price .laser-complex-table-wrap::-webkit-scrollbar-track {
+      background: rgba(43, 29, 22, 0.12);
+      border-radius: 999px;
+    }
+
+    body[data-page="laser"] #price .laser-complex-table-wrap::-webkit-scrollbar-thumb {
+      background: #2b1d16;
+      border-radius: 999px;
+    }
+
+    body[data-page="laser"] #price .laser-complex-table-wrap::-webkit-scrollbar-thumb:hover {
+      background: #4a3228;
+    }
+
+    body[data-page="laser"] #price .laser-complex-table {
+      width: 100%;
+      border-collapse: collapse;
+      color: #2b1d16;
+      font-size: 0.88rem;
+    }
+
+    body[data-page="laser"] #price .laser-complex-table th,
+    body[data-page="laser"] #price .laser-complex-table td {
+      padding: 12px 10px;
+      text-align: left;
+      vertical-align: top;
+      border-bottom: 1px solid rgba(43, 29, 22, 0.16);
+    }
+
+    body[data-page="laser"] #price .laser-complex-table th {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      white-space: nowrap;
+    }
+
+    body[data-page="laser"] #price .laser-complex-size {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 1.6rem;
+      font-weight: 600;
+      line-height: 1;
+    }
+
+    body[data-page="laser"] #price .laser-complex-once {
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    body[data-page="laser"] #price .laser-complex-split {
+      display: block;
+      white-space: nowrap;
+    }
+
+    body[data-page="laser"] #price .laser-complex-split small {
+      display: block;
+      font-size: 0.78rem;
+      opacity: 0.78;
+    }
+
+    body[data-page="laser"] #price .laser-complex-note {
+      margin: 22px 0 0;
+      text-align: center;
+      font-family: "Cormorant Garamond", serif;
+      font-style: italic;
+      font-size: 1.15rem;
+      color: #2b1d16;
+    }
+
+    body[data-page="laser"] #price .laser-price-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 8px;
+      border-radius: 999px;
+    }
+
+    body[data-page="laser"] #price .laser-price-appeal {
+      margin: 18px 0 0;
+      max-width: 420px;
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(1.15rem, 2.2vw, 1.45rem);
+      line-height: 1.4;
+      color: var(--gold-soft);
+      text-align: center;
+    }
+
+    /* Только FAQ на /laser */
+    body[data-page="laser"] #faq .laser-faq-layout {
+      display: grid;
+      gap: 28px;
+      align-items: start;
+    }
+
+    body[data-page="laser"] #faq .laser-faq-visual {
+      margin: 0;
+      border-radius: 28px;
+      overflow: hidden;
+      border: 1px solid rgba(212, 176, 122, 0.22);
+    }
+
+    body[data-page="laser"] #faq .laser-faq-visual img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    body[data-page="laser"] #faq .laser-faq-list {
+      max-width: none;
+      margin: 0;
+    }
+
+    @media (min-width: 901px) {
+      body[data-page="laser"] #faq .laser-faq-layout {
+        grid-template-columns: minmax(280px, 0.85fr) 1.15fr;
+        gap: 48px;
+        align-items: center;
+      }
+
+      body[data-page="laser"] #faq .laser-faq-visual img {
+        min-height: 560px;
+        height: 100%;
+      }
+    }
+
+    body[data-page="laser"] #faq .laser-faq-item {
+      border-bottom: 1px solid rgba(212, 176, 122, 0.18);
+    }
+
+    body[data-page="laser"] #faq .laser-faq-item:first-child {
+      border-top: 1px solid rgba(212, 176, 122, 0.18);
+    }
+
+    body[data-page="laser"] #faq .laser-faq-item summary {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 18px 4px;
+      cursor: pointer;
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(1.15rem, 2.2vw, 1.4rem);
+      font-weight: 500;
+      line-height: 1.35;
+      color: var(--gold-soft);
+    }
+
+    body[data-page="laser"] #faq .laser-faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+
+    body[data-page="laser"] #faq .laser-faq-item summary::after {
+      content: "+";
+      flex: 0 0 auto;
+      width: 28px;
+      height: 28px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(212, 176, 122, 0.35);
+      border-radius: 50%;
+      color: var(--gold);
+      font-family: Inter, system-ui, sans-serif;
+      font-size: 1.1rem;
+      line-height: 1;
+      transition: transform 0.25s ease, background 0.25s ease, border-color 0.25s ease;
+    }
+
+    body[data-page="laser"] #faq .laser-faq-item[open] summary::after {
+      content: "–";
+      transform: rotate(180deg);
+      background: rgba(212, 176, 122, 0.12);
+      border-color: var(--gold);
+    }
+
+    body[data-page="laser"] #faq .laser-faq-answer {
+      display: grid;
+      grid-template-rows: 0fr;
+      transition: grid-template-rows 0.28s ease;
+    }
+
+    body[data-page="laser"] #faq .laser-faq-item[open] .laser-faq-answer {
+      grid-template-rows: 1fr;
+    }
+
+    body[data-page="laser"] #faq .laser-faq-answer > p {
+      overflow: hidden;
+      margin: 0;
+      padding: 0 4px 18px;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+  </style>
+</head>
+<body data-page="laser">
+  <div id="app-header"></div>
+
+  <main>
+    <section class="hero hero-service" id="top">
+      <img class="hero-bg" src="../images/about.jpg?v=2" alt="Лазерная эпиляция Sofia" fetchpriority="high" decoding="async">
+      <div class="wrap">
+        <div class="hero-copy">
+          <p class="eyebrow">Услуга · лазерная эпиляция · женская / мужская</p>
+          <h1>Идеально гладкая и нежная кожа без раздражения</h1>
+          <p class="lead">Диодная лазерная эпиляция — это современный и безопасный способ надолго забыть о нежелательных волосах и дискомфорте после домашних процедур. Световой импульс диодного лазера бережно воздействует только на корень волоса и останавливает его рост, не перегревая кожу за счёт встроенной системы охлаждения.</p>
+          <p class="lead">Зачем её делают: чтобы сделать кожу ровной, бархатистой и нежной, избавиться от покраснений и сэкономить время на ежедневном уходе — причём комфортно и без ожогов.</p>
+          <p class="laser-hero-accent">Бережная забота о гладкости вашей кожи с видимым результатом после первого визита.</p>
+          <div class="hero-actions">
+            <a class="btn btn-gold" href="tel:+79990000000">Позвонить в студию</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="laser-men" id="men">
+      <div class="wrap laser-men-inner">
+        <div class="laser-men-copy">
+          <h2>Мужской взгляд на уход: гладкая кожа и комфорт без бритвы</h2>
+          <p class="lead">Лазерная эпиляция для мужчин — это практичный способ поддерживать ухоженный вид и забыть о ежедневной рутине. В нашей студии мужским процедурам уделяется особое внимание: мы точно настраиваем параметры лазера под более плотный мужской волос, обеспечивая максимальный комфорт на каждом сеансе.</p>
+          <p class="laser-men-list-title">Почему мужчины выбирают лазер:</p>
+          <ul>
+            <li>Никакого раздражения. Кожа на шее и щеках больше не краснеет и не зудит, как после станка или триммера.</li>
+            <li>Идеальные контуры. Четкая линия бороды, бакенбард и шеи сохраняется надолго без постоянной коррекции.</li>
+            <li>Гигиена и свежесть. Удаление волос в зоне подмышек, груди или спины помогает дольше сохранять ощущение чистоты при активном образе жизни и занятиях спортом.</li>
+          </ul>
+          <p class="laser-hero-accent">Видимый результат уже после первой процедуры, экономия времени по утрам и уверенность в любой ситуации.</p>
+          <div class="hero-actions">
+            <a class="btn btn-gold" href="tel:+79990000000">Записаться на сеанс</a>
+          </div>
+        </div>
+        <div class="laser-men-visual">
+          <img src="../images/laser-men.jpg?v=1" alt="Мужская лазерная эпиляция Sofia" decoding="async">
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark" id="method">
+      <div class="wrap">
+        <p class="eyebrow" style="text-align:center">Как это работает</p>
+        <h2>Принцип метода</h2>
+        <div class="gold-line"></div>
+        <p class="lead" style="max-width:760px;margin:0 auto 28px;text-align:center">Лазерный импульс притягивается пигментом волоса, нагревает фолликул и аккуратно разрушает его питание. Кожа вокруг не травмируется. Волосы выпадают постепенно, а новые растут всё слабее.</p>
+        <div class="adv-grid">
+          <article class="card">
+            <h3>Диодный лазер</h3>
+            <p>Золотой стандарт эпиляции: подходит большинству фототипов, работает даже с тонким волосом и даёт комфорт за счёт охлаждения.</p>
+          </article>
+          <article class="card">
+            <h3>Только растущие волосы</h3>
+            <p>За один сеанс лазер берёт волосы в активной фазе. Поэтому курс — это несколько визитов с паузой около месяца.</p>
+          </article>
+          <article class="card">
+            <h3>Долгий эффект</h3>
+            <p>После курса кожа остаётся гладкой на месяцы. Поддерживающие сеансы нужны редко и подбираются индивидуально.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="advantages">
+      <div class="wrap">
+        <h2>Почему выбирают именно нас</h2>
+        <div class="gold-line"></div>
+        <p class="laser-why-lead">В студии Sofia мы выстроили работу так, чтобы вы чувствовали себя в безопасности и видели реальный результат после каждого визита. Вот на чём строится наш подход:</p>
+        <div class="laser-why-grid">
+          <article class="laser-why-item">
+            <h3>Мастера с медицинским образованием и опытом от 3 лет</h3>
+            <p>Процедуры проводят дипломированные специалисты, которые глубоко понимают физиологию кожи, учитывают все противопоказания и настраивают аппарат индивидуально под вас.</p>
+          </article>
+          <article class="laser-why-item">
+            <h3>Современное сертифицированное оборудование</h3>
+            <p>Мы используем профессиональные аппараты последнего поколения, которые проходят регулярную проверку и обеспечивают высокую эффективность без травмирования кожи.</p>
+          </article>
+          <article class="laser-why-item">
+            <h3>Безупречная стерильность</h3>
+            <p>Одноразовые расходные материалы вскрываются строго при вас, а дезинфекция кабинета и манипул проводится после каждого клиента.</p>
+          </article>
+          <article class="laser-why-item">
+            <h3>Безопасность каждой процедуры</h3>
+            <p>Все методики щадящие, не повреждают кожу и не требуют долгой реабилитации — вы сразу возвращаетесь к привычному ритму жизни.</p>
+          </article>
+          <article class="laser-why-item">
+            <h3>Камерная атмосфера и комфорт</h3>
+            <p>У нас нет потока и спешки: каждый визит проходит в спокойной, приватной обстановке, где всё время мастера посвящено только вам.</p>
+          </article>
+          <article class="laser-why-item">
+            <h3>Индивидуальный подбор параметров</h3>
+            <p>Мы не работаем на шаблонных настройках — специалист оценивает особенности вашей кожи и подбирает оптимальный режим для максимального эффекта.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark" id="faq">
+      <div class="wrap">
+        <h2>Часто задаваемые вопросы</h2>
+        <div class="gold-line"></div>
+        <div class="laser-faq-layout">
+          <div class="laser-faq-visual">
+            <img src="../images/laser-faq.jpg?v=1" alt="Лазерная эпиляция Sofia" decoding="async">
+          </div>
+          <div class="laser-faq-list">
+          <details class="laser-faq-item">
+            <summary>Это больно? Я очень боюсь неприятных ощущений.</summary>
+            <div class="laser-faq-answer">
+              <p>Нет, процедура проходит комфортно. В нашем диодном лазере встроена мощная контактная система охлаждения: наконечник манипулы охлаждает кожу прямо во время вспышки, поэтому вы чувствуете лишь лёгкое тепло и приятное покалывание.</p>
+            </div>
+          </details>
+          <details class="laser-faq-item">
+            <summary>Сколько сеансов нужно пройти, чтобы волосы перестали расти?</summary>
+            <div class="laser-faq-answer">
+              <p>В среднем полный курс составляет 8–10 процедур с интервалом 3–4 недели. Лазер воздействует только на волосы в активной фазе роста, поэтому для захвата всех спящих фолликулов нужно время. При этом до 20–30% волос уходят уже после первого визита.</p>
+            </div>
+          </details>
+          <details class="laser-faq-item">
+            <summary>Как правильно подготовиться к первому сеансу?</summary>
+            <div class="laser-faq-answer">
+              <p>Подготовка максимально простая: за 12–24 часа до визита нужно гладко сбрить волосы станком в зоне эпиляции. За 2–3 недели до процедуры нельзя выдёргивать волосы воском, шугарингом или эпилятором (должен сохраниться корень волоса), а за 7–10 дней лучше избегать активного загара.</p>
+            </div>
+          </details>
+          <details class="laser-faq-item">
+            <summary>Можно ли делать лазерную эпиляцию летом или на загорелой коже?</summary>
+            <div class="laser-faq-answer">
+              <p>Да, современный диодный лазер позволяет безопасно работать круглый год, в том числе со смуглой и слегка загорелой кожей. Главное правило — не загорать на активном солнце и в солярии за 7 дней до и 7 дней после процедуры, а также использовать крем с SPF на открытых участках.</p>
+            </div>
+          </details>
+          <details class="laser-faq-item">
+            <summary>Безопасно ли это для здоровья и не вызывает ли лазер проблем с кожей?</summary>
+            <div class="laser-faq-answer">
+              <p>Абсолютно безопасно. Луч диодного лазера проникает на глубину всего 2–3 мм — ровно до волосяного фолликула, не затрагивая внутренние органы и лимфоузлы. Процедуру проводят мастера с медицинским образованием, а перед началом мы обязательно проверяем список противопоказаний.</p>
+            </div>
+          </details>
+          <details class="laser-faq-item">
+            <summary>Какие есть противопоказания к процедуре?</summary>
+            <div class="laser-faq-answer">
+              <p>К основным противопоказаниям относятся беременность и период грудного вскармливания, онкологические заболевания, сахарный диабет в стадии декомпенсации, острые кожные воспаления в зоне обработки, свежий загар (менее 7 дней) и приём некоторых фотосенсибилизирующих препаратов. На консультации специалист подробно всё уточнит.</p>
+            </div>
+          </details>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="price">
+      <div class="wrap">
+        <p class="eyebrow" style="text-align:center">Прайс</p>
+        <h2>Стоимость лазерной эпиляции</h2>
+        <div class="gold-line"></div>
+
+        <div class="laser-price-pyramid">
+          <div class="laser-price-tabs" role="tablist" aria-label="Категории прайса">
+            <button type="button" class="laser-price-tab" data-price-tab="women" role="tab" aria-selected="false">Женская эпиляция</button>
+            <button type="button" class="laser-price-tab" data-price-tab="men" role="tab" aria-selected="false">Мужская эпиляция</button>
+            <button type="button" class="laser-price-tab" data-price-tab="complex" role="tab" aria-selected="false">Комплексы</button>
+          </div>
+
+          <div class="laser-price-subtabs" hidden role="tablist" aria-label="Комплексы">
+            <button type="button" class="laser-price-tab" data-price-sub="complex-women" role="tab" aria-selected="false">Женские комплексы</button>
+            <button type="button" class="laser-price-tab" data-price-sub="complex-men" role="tab" aria-selected="false">Мужские комплексы</button>
+          </div>
+
+          <div class="laser-price-panel" data-price-panel="women" role="tabpanel" hidden>
+            <div class="laser-price-slot" data-price-slot="women">
+              <div class="laser-price-sheet">
+                <button type="button" class="laser-price-close" aria-label="Закрыть прайс">×</button>
+                <h3>Эпиляция женщины</h3>
+                <div class="laser-price-groups">
+                  <div class="laser-price-group">
+                    <h4>Руки</h4>
+                    <ul>
+                      <li><span>Пальцы рук и кисти</span><span>790 ₽</span></li>
+                      <li><span>Руки до локтя / предплечья</span><span>1 490 ₽</span></li>
+                      <li><span>Руки выше локтя / плечи</span><span>1 890 ₽</span></li>
+                      <li><span>Подмышки</span><span>1 290 ₽</span></li>
+                      <li><span>Руки полностью</span><span>2 290 ₽</span></li>
+                    </ul>
+                  </div>
+                  <div class="laser-price-group">
+                    <h4>Лицо</h4>
+                    <ul>
+                      <li><span>Межбровье</span><span>790 ₽</span></li>
+                      <li><span>Верхняя губа</span><span>790 ₽</span></li>
+                      <li><span>Подбородок</span><span>790 ₽</span></li>
+                      <li><span>Бакенбарды</span><span>790 ₽</span></li>
+                      <li><span>Скулы</span><span>790 ₽</span></li>
+                      <li><span>Шея</span><span>990 ₽</span></li>
+                      <li><span>Щеки (бакенбарды и скулы)</span><span>990 ₽</span></li>
+                      <li><span>Лоб</span><span>790 ₽</span></li>
+                      <li><span>Виски</span><span>790 ₽</span></li>
+                      <li><span>Лицо полностью (верхняя губа, подбородок, виски и шея)</span><span>2 290 ₽</span></li>
+                    </ul>
+                  </div>
+                  <div class="laser-price-group">
+                    <h4>Тело</h4>
+                    <ul>
+                      <li><span>Вокруг сосков / ареолы</span><span>790 ₽</span></li>
+                      <li><span>Декольте / межгрудная область</span><span>990 ₽</span></li>
+                      <li><span>Грудь полностью</span><span>1 490 ₽</span></li>
+                      <li><span>Белая линия живота</span><span>990 ₽</span></li>
+                      <li><span>Живот полностью</span><span>1 890 ₽</span></li>
+                      <li><span>Поясница</span><span>990 ₽</span></li>
+                      <li><span>Спина полностью</span><span>2 490 ₽</span></li>
+                      <li><span>Плечевой пояс</span><span>1 490 ₽</span></li>
+                    </ul>
+                  </div>
+                  <div class="laser-price-group">
+                    <h4>Ноги</h4>
+                    <ul>
+                      <li><span>Пальцы ног и стопы</span><span>990 ₽</span></li>
+                      <li><span>Голени</span><span>2 490 ₽</span></li>
+                      <li><span>Бёдра</span><span>2 590 ₽</span></li>
+                      <li><span>Ноги полностью</span><span>3 290 ₽</span></li>
+                    </ul>
+                  </div>
+                  <div class="laser-price-group">
+                    <h4>Интимные зоны</h4>
+                    <ul>
+                      <li><span>Межъягодичная впадина</span><span>790 ₽</span></li>
+                      <li><span>Ягодицы</span><span>1 990 ₽</span></li>
+                      <li><span>Бикини классическое</span><span>1 790 ₽</span></li>
+                      <li><span>Бикини тотальное</span><span>2 390 ₽</span></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="laser-price-panel" data-price-panel="men" role="tabpanel" hidden>
+            <div class="laser-price-slot" data-price-slot="men">
+              <div class="laser-price-sheet">
+                <button type="button" class="laser-price-close" aria-label="Закрыть прайс">×</button>
+                <h3>Мужская эпиляция</h3>
+                <div class="laser-price-groups">
+                  <div class="laser-price-group">
+                    <h4>Руки</h4>
+                    <ul>
+                      <li><span>Пальцы рук и кисти рук</span><span>1 090 ₽</span></li>
+                      <li><span>Руки до локтя / предплечья</span><span>3 090 ₽</span></li>
+                      <li><span>Руки выше локтя / плечи</span><span>3 090 ₽</span></li>
+                      <li><span>Подмышки</span><span>1 490 ₽</span></li>
+                      <li><span>Руки полностью</span><span>4 790 ₽</span></li>
+                    </ul>
+                  </div>
+                  <div class="laser-price-group">
+                    <h4>Лицо</h4>
+                    <ul>
+                      <li><span>Межбровье</span><span>890 ₽</span></li>
+                      <li><span>Верхняя губа</span><span>1 090 ₽</span></li>
+                      <li><span>Подбородок</span><span>1 090 ₽</span></li>
+                      <li><span>Бакенбарды</span><span>1 090 ₽</span></li>
+                      <li><span>Скулы</span><span>1 090 ₽</span></li>
+                      <li><span>Шея</span><span>1 490 ₽</span></li>
+                      <li><span>Щёки</span><span>1 790 ₽</span></li>
+                      <li><span>Лоб</span><span>1 090 ₽</span></li>
+                      <li><span>Виски</span><span>1 090 ₽</span></li>
+                      <li><span>Лицо полностью (верхняя губа, подбородок, виски и шея)</span><span>3 390 ₽</span></li>
+                    </ul>
+                  </div>
+                  <div class="laser-price-group">
+                    <h4>Тело</h4>
+                    <ul>
+                      <li><span>Вокруг сосков / ареолы</span><span>1 090 ₽</span></li>
+                      <li><span>Декольте / межгрудная область</span><span>2 790 ₽</span></li>
+                      <li><span>Грудь полностью</span><span>3 490 ₽</span></li>
+                      <li><span>Белая линия живота</span><span>1 490 ₽</span></li>
+                      <li><span>Живот полностью</span><span>3 690 ₽</span></li>
+                      <li><span>Поясница</span><span>1 490 ₽</span></li>
+                      <li><span>Спина полностью</span><span>4 790 ₽</span></li>
+                      <li><span>Плечевой пояс</span><span>3 690 ₽</span></li>
+                    </ul>
+                  </div>
+                  <div class="laser-price-group">
+                    <h4>Ноги</h4>
+                    <ul>
+                      <li><span>Пальцы ног и стопы</span><span>1 490 ₽</span></li>
+                      <li><span>Голени</span><span>4 590 ₽</span></li>
+                      <li><span>Бёдра</span><span>4 790 ₽</span></li>
+                      <li><span>Ноги полностью</span><span>6 290 ₽</span></li>
+                    </ul>
+                  </div>
+                  <div class="laser-price-group">
+                    <h4>Интимные зоны</h4>
+                    <ul>
+                      <li><span>Межъягодичная впадина</span><span>1 490 ₽</span></li>
+                      <li><span>Ягодицы</span><span>3 470 ₽</span></li>
+                      <li><span>Бикини классическое</span><span>1 690 ₽</span></li>
+                      <li><span>Бикини тотальное</span><span>3 390 ₽</span></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="laser-price-panel" data-price-panel="complex-women" role="tabpanel" hidden>
+            <div class="laser-price-slot" data-price-slot="complex-women">
+              <div class="laser-price-sheet">
+                <button type="button" class="laser-price-close" aria-label="Закрыть прайс">×</button>
+                <h3>Комплексы женской эпиляции</h3>
+                <div class="laser-complex-table-wrap">
+                  <table class="laser-complex-table">
+                    <thead>
+                      <tr>
+                        <th>Комплекс</th>
+                        <th>Состав</th>
+                        <th>Разовая</th>
+                        <th>3+1</th>
+                        <th>4+2</th>
+                        <th>6+4</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><span class="laser-complex-size">S</span></td>
+                        <td>Подмышки + тотальное бикини</td>
+                        <td class="laser-complex-once">2 990 ₽</td>
+                        <td><span class="laser-complex-split">10 470 ₽<small>2 618 ₽</small></span></td>
+                        <td><span class="laser-complex-split">13 960 ₽<small>2 327 ₽</small></span></td>
+                        <td><span class="laser-complex-split">20 940 ₽<small>2 094 ₽</small></span></td>
+                      </tr>
+                      <tr>
+                        <td><span class="laser-complex-size">M</span></td>
+                        <td>Подмышки + тотальное бикини + голени, стопы</td>
+                        <td class="laser-complex-once">4 990 ₽</td>
+                        <td><span class="laser-complex-split">14 970 ₽<small>3 743 ₽</small></span></td>
+                        <td><span class="laser-complex-split">19 960 ₽<small>3 327 ₽</small></span></td>
+                        <td><span class="laser-complex-split">29 940 ₽<small>2 994 ₽</small></span></td>
+                      </tr>
+                      <tr>
+                        <td><span class="laser-complex-size">L</span></td>
+                        <td>Подмышки + тотальное бикини + ноги полностью + руки + белая линия живота + верхняя губа</td>
+                        <td class="laser-complex-once">7 990 ₽</td>
+                        <td><span class="laser-complex-split">23 970 ₽<small>5 993 ₽</small></span></td>
+                        <td><span class="laser-complex-split">31 960 ₽<small>5 326 ₽</small></span></td>
+                        <td><span class="laser-complex-split">47 940 ₽<small>4 794 ₽</small></span></td>
+                      </tr>
+                      <tr>
+                        <td><span class="laser-complex-size">XL</span></td>
+                        <td>Всё тело (неограниченное количество зон)</td>
+                        <td class="laser-complex-once">9 990 ₽</td>
+                        <td><span class="laser-complex-split">29 970 ₽<small>7 493 ₽</small></span></td>
+                        <td><span class="laser-complex-split">39 960 ₽<small>6 660 ₽</small></span></td>
+                        <td>—</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <p class="laser-complex-note">Комплексы — выгодный выбор для гладкой кожи надолго</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="laser-price-panel" data-price-panel="complex-men" role="tabpanel" hidden>
+            <div class="laser-price-slot" data-price-slot="complex-men">
+              <div class="laser-price-sheet">
+                <button type="button" class="laser-price-close" aria-label="Закрыть прайс">×</button>
+                <h3>Комплексы мужской эпиляции</h3>
+                <div class="laser-complex-table-wrap">
+                  <table class="laser-complex-table">
+                    <thead>
+                      <tr>
+                        <th>Комплекс</th>
+                        <th>Состав</th>
+                        <th>Разовая</th>
+                        <th>3+1</th>
+                        <th>4+2</th>
+                        <th>6+4</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><span class="laser-complex-size">S</span></td>
+                        <td>Подмышки + тотальное бикини</td>
+                        <td class="laser-complex-once">4 190 ₽</td>
+                        <td><span class="laser-complex-split">12 570 ₽<small>3 143 ₽</small></span></td>
+                        <td><span class="laser-complex-split">16 760 ₽<small>2 793 ₽</small></span></td>
+                        <td><span class="laser-complex-split">25 140 ₽<small>2 514 ₽</small></span></td>
+                      </tr>
+                      <tr>
+                        <td><span class="laser-complex-size">M</span></td>
+                        <td>Подмышки + бикини + грудь полностью + белая линия живота</td>
+                        <td class="laser-complex-once">7 490 ₽</td>
+                        <td><span class="laser-complex-split">22 470 ₽<small>5 618 ₽</small></span></td>
+                        <td><span class="laser-complex-split">29 960 ₽<small>4 993 ₽</small></span></td>
+                        <td><span class="laser-complex-split">44 940 ₽<small>4 494 ₽</small></span></td>
+                      </tr>
+                      <tr>
+                        <td><span class="laser-complex-size">L</span></td>
+                        <td>Подмышки + бикини + грудь + живот + спина + межбровье</td>
+                        <td class="laser-complex-once">13 190 ₽</td>
+                        <td><span class="laser-complex-split">39 570 ₽<small>9 893 ₽</small></span></td>
+                        <td><span class="laser-complex-split">52 760 ₽<small>8 793 ₽</small></span></td>
+                        <td><span class="laser-complex-split">79 140 ₽<small>7 914 ₽</small></span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <p class="laser-complex-note">Комплексы — выгодный выбор для гладкой кожи надолго</p>
+              </div>
+            </div>
+          </div>
+
+          <a class="btn btn-gold laser-price-cta" href="tel:+79990000000">Связаться с администратором</a>
+          <p class="laser-price-appeal">Подарите своей коже идеальную гладкость на долгие годы</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark" id="contacts">
+      <div class="wrap contact-grid">
+        <div>
+          <p class="eyebrow">Запись</p>
+          <h2 style="text-align:left">Записаться на лазерную эпиляцию</h2>
+          <div class="gold-line" style="margin-left:0"></div>
+          <p class="lead">Администратор расскажет о процедуре, подскажет точную цену и запишет вас в удобное время.</p>
+          <p><strong>Москва</strong><br>м. Пражская, ТЦ «Колумбус»<br>Ежедневно с 10:00 до 21:00</p>
+          <p><a href="tel:+79990000000">+7 (999) 000-00-00</a></p>
+        </div>
+        <form class="card form" id="lead-form">
+          <div class="fields">
+            <label>Имя<input type="text" name="name" autocomplete="name"></label>
+            <label>Телефон<input type="tel" name="phone" class="js-phone" placeholder="+7 (___) ___-__-__" required></label>
+            <label class="hp-field" aria-hidden="true">Сайт<input type="text" name="website" class="js-hp" tabindex="-1" autocomplete="off"></label>
+            <button class="btn btn-gold" type="submit">Подобрать удобное время</button>
+          </div>
+          <p class="form-success">Спасибо. Заявка принята. Мы свяжемся с вами в ближайшее время.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <div id="app-footer"></div>
+  <script src="../layout.js?v=27"></script>
+  <script src="../app.js?v=22"></script>
+  <script>
+    (function () {
+      var root = document.querySelector('body[data-page="laser"] #price');
+      if (!root) return;
+
+      var mainTabs = root.querySelectorAll('[data-price-tab]');
+      var subWrap = root.querySelector('.laser-price-subtabs');
+      var subTabs = root.querySelectorAll('[data-price-sub]');
+      var panels = root.querySelectorAll('[data-price-panel]');
+      function showPanel(id) {
+        panels.forEach(function (panel) {
+          var on = !!id && panel.getAttribute('data-price-panel') === id;
+          panel.classList.toggle('is-active', on);
+          if (on) panel.removeAttribute('hidden');
+          else panel.setAttribute('hidden', '');
+        });
+      }
+
+      function setActive(btns, attr, id) {
+        btns.forEach(function (btn) {
+          var on = !!id && btn.getAttribute(attr) === id;
+          btn.classList.toggle('is-active', on);
+          btn.setAttribute('aria-selected', on ? 'true' : 'false');
+        });
+      }
+
+      function closePrice() {
+        setActive(mainTabs, 'data-price-tab', null);
+        setActive(subTabs, 'data-price-sub', null);
+        subWrap.hidden = true;
+        showPanel(null);
+      }
+
+      function closeSheet(btn) {
+        var panel = btn && btn.closest('[data-price-panel]');
+        var panelId = panel && panel.getAttribute('data-price-panel');
+        if (panelId && panelId.indexOf('complex') === 0) {
+          setActive(subTabs, 'data-price-sub', null);
+          showPanel(null);
+          return;
+        }
+        closePrice();
+      }
+
+      mainTabs.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var id = btn.getAttribute('data-price-tab');
+          if (btn.classList.contains('is-active')) {
+            closePrice();
+            return;
+          }
+          setActive(mainTabs, 'data-price-tab', id);
+
+          if (id === 'complex') {
+            subWrap.hidden = false;
+            setActive(subTabs, 'data-price-sub', null);
+            showPanel(null);
+          } else {
+            subWrap.hidden = true;
+            showPanel(id);
+          }
+        });
+      });
+
+      root.querySelectorAll('.laser-price-close').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          closeSheet(btn);
+        });
+      });
+
+      subTabs.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var id = btn.getAttribute('data-price-sub');
+          if (btn.classList.contains('is-active')) {
+            setActive(subTabs, 'data-price-sub', null);
+            showPanel(null);
+            return;
+          }
+          setActive(subTabs, 'data-price-sub', id);
+          showPanel(id);
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

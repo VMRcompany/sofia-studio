@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Вакуумный массаж в Москве — Sofia</title>
+  <meta name="description" content="Вакуумный массаж в студии Sofia: лимфодренаж, минус в объёмах, упругая кожа без синяков.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="../images/massage-hero.jpg?v=1">
+  <link rel="stylesheet" href="../styles.css?v=31">
+  <style>
+    /* Только герой услуги на /massage */
+    body[data-page="massage"] .massage-hero-accent {
+      margin: 18px 0 0;
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(1.25rem, 2.4vw, 1.7rem);
+      line-height: 1.35;
+      color: var(--gold);
+    }
+
+    /* Только блок преимуществ / показаний на /massage */
+    body[data-page="massage"] #advantages .massage-why-lead {
+      max-width: 760px;
+      margin: 0 auto 36px;
+      text-align: center;
+      color: var(--muted);
+    }
+
+    body[data-page="massage"] #advantages .massage-why-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 28px 48px;
+    }
+
+    body[data-page="massage"] #advantages .massage-why-item {
+      margin: 0;
+      padding: 0;
+      background: none;
+      border: 0;
+      box-shadow: none;
+    }
+
+    body[data-page="massage"] #advantages .massage-why-item::before {
+      content: "";
+      display: block;
+      width: 56px;
+      height: 1px;
+      margin: 0 0 14px;
+      background: linear-gradient(90deg, var(--gold), transparent);
+    }
+
+    body[data-page="massage"] #advantages .massage-why-item h3 {
+      margin: 0 0 10px;
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(1.35rem, 2.2vw, 1.75rem);
+      font-weight: 500;
+      line-height: 1.25;
+      color: var(--gold-soft);
+    }
+
+    body[data-page="massage"] #advantages .massage-why-item p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    @media (min-width: 901px) {
+      body[data-page="massage"] #advantages .massage-why-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto;
+        grid-auto-flow: column;
+      }
+    }
+
+    /* Только блок Прайс на /massage */
+    body[data-page="massage"] #price .price-layout {
+      display: grid;
+      gap: 22px;
+      align-items: center;
+    }
+
+    body[data-page="massage"] #price .price-visual {
+      width: 100%;
+      max-width: none;
+      margin: 0;
+    }
+
+    body[data-page="massage"] #price .price-aside {
+      text-align: center;
+    }
+
+    body[data-page="massage"] #price .price-aside-title {
+      margin: 0 0 22px;
+      font-family: "Cormorant Garamond", serif;
+      font-weight: 500;
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      line-height: 1.2;
+      color: var(--gold);
+    }
+
+    @media (min-width: 901px) {
+      body[data-page="massage"] #price .price-layout {
+        grid-template-columns: minmax(280px, 480px) 1fr;
+        gap: 40px;
+        align-items: center;
+      }
+
+      body[data-page="massage"] #price .price-visual {
+        max-width: 480px;
+        justify-self: start;
+      }
+
+      body[data-page="massage"] #price .price-aside {
+        text-align: left;
+      }
+    }
+
+    /* Только FAQ на /massage */
+    body[data-page="massage"] #faq .massage-faq-list {
+      max-width: 820px;
+      margin: 0 auto;
+    }
+
+    body[data-page="massage"] #faq .massage-faq-item {
+      border-bottom: 1px solid rgba(212, 176, 122, 0.18);
+    }
+
+    body[data-page="massage"] #faq .massage-faq-item:first-child {
+      border-top: 1px solid rgba(212, 176, 122, 0.18);
+    }
+
+    body[data-page="massage"] #faq .massage-faq-item summary {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 18px 4px;
+      cursor: pointer;
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(1.15rem, 2.2vw, 1.4rem);
+      font-weight: 500;
+      line-height: 1.35;
+      color: var(--gold-soft);
+    }
+
+    body[data-page="massage"] #faq .massage-faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+
+    body[data-page="massage"] #faq .massage-faq-item summary::after {
+      content: "+";
+      flex: 0 0 auto;
+      width: 28px;
+      height: 28px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(212, 176, 122, 0.35);
+      border-radius: 50%;
+      color: var(--gold);
+      font-family: Inter, system-ui, sans-serif;
+      font-size: 1.1rem;
+      line-height: 1;
+      transition: transform 0.25s ease, background 0.25s ease, border-color 0.25s ease;
+    }
+
+    body[data-page="massage"] #faq .massage-faq-item[open] summary::after {
+      content: "–";
+      transform: rotate(180deg);
+      background: rgba(212, 176, 122, 0.12);
+      border-color: var(--gold);
+    }
+
+    body[data-page="massage"] #faq .massage-faq-answer {
+      display: grid;
+      grid-template-rows: 0fr;
+      transition: grid-template-rows 0.28s ease;
+    }
+
+    body[data-page="massage"] #faq .massage-faq-item[open] .massage-faq-answer {
+      grid-template-rows: 1fr;
+    }
+
+    body[data-page="massage"] #faq .massage-faq-answer > p {
+      overflow: hidden;
+      margin: 0;
+      padding: 0 4px 18px;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+  </style>
+</head>
+<body data-page="massage">
+  <div id="app-header"></div>
+
+  <main>
+    <section class="hero hero-service" id="top">
+      <img class="hero-bg" src="../images/massage-hero.jpg?v=1" alt="Вакуумный массаж Sofia" fetchpriority="high" decoding="async">
+      <div class="wrap">
+        <div class="hero-copy">
+          <p class="eyebrow">Услуга · вакуумный массаж</p>
+          <h1>Идеальный силуэт и упругая кожа без отёков</h1>
+          <p class="lead">Вакуумный массаж — это глубокая аппаратная проработка тела, которая достаёт до таких слоёв тканей, куда просто невозможно добраться руками. За счёт мягкого перепада давления процедура работает в разы эффективнее обычного ручного массажа: она активно разгоняет лимфу, выводит лишнюю жидкость и запускает естественное обновление кожи.</p>
+          <p class="lead">Зачем его делают: чтобы убрать отёчность и «апельсиновую корку», уменьшить объёмы в проблемных зонах, подтянуть кожу и вернуть телу приятное ощущение лёгкости — причём бережно, без синяков и боли.</p>
+          <p class="massage-hero-accent">Бережная забота о контурах вашего тела с видимым результатом.</p>
+          <div class="hero-actions">
+            <a class="btn btn-gold" href="tel:+79990000000">Позвонить в студию</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark" id="method">
+      <div class="wrap">
+        <p class="eyebrow" style="text-align:center">Как это работает</p>
+        <h2>Принцип метода</h2>
+        <div class="gold-line"></div>
+        <p class="lead" style="max-width:760px;margin:0 auto 28px;text-align:center">Вакуумная манипула мягко захватывает ткань, ускоряет лимфоток и улучшает кровообращение. Уходят отёки, смягчается рельеф, кожа выглядит плотнее и ровнее.</p>
+        <div class="adv-grid">
+          <article class="card">
+            <h3>Лимфодренаж</h3>
+            <p>Запускает отток лишней жидкости, снимает чувство тяжести и визуальную отёчность.</p>
+          </article>
+          <article class="card">
+            <h3>Бережная проработка</h3>
+            <p>Интенсивность подбираем индивидуально, чтобы был эффект без синяков и долгого восстановления.</p>
+          </article>
+          <article class="card">
+            <h3>Видимый результат</h3>
+            <p>Первые изменения часто заметны уже после первых визитов: гладкость, тонус и более мягкие контуры.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="advantages">
+      <div class="wrap">
+        <p class="eyebrow" style="text-align:center">Показания</p>
+        <h2>Какие задачи решает вакуумный массаж</h2>
+        <div class="gold-line"></div>
+        <p class="massage-why-lead">Процедура помогает справиться с эстетическими и физическими задачами, когда спорта и домашнего ухода недостаточно. Сеансы особенно эффективны, если вы хотите решить следующие проблемы:</p>
+        <div class="massage-why-grid">
+          <article class="massage-why-item">
+            <h3>Ощущение тяжести и утренние отёки</h3>
+            <p>Когда к вечеру отекают ноги, появляется тяжесть в теле или задерживается лишняя жидкость из-за сидячей работы.</p>
+          </article>
+          <article class="massage-why-item">
+            <h3>Локальные объёмы, которые не уходят</h3>
+            <p>Когда вес в норме, но остаются «ушки» на бёдрах, небольшой животик или объёмы в зоне талии, с которыми не справляются тренировки.</p>
+          </article>
+          <article class="massage-why-item">
+            <h3>Неровный рельеф и «апельсиновая корка»</h3>
+            <p>Когда кожа теряет гладкость, появляются бугорки и застойные явления, которые хочется выровнять без агрессивных методов.</p>
+          </article>
+          <article class="massage-why-item">
+            <h3>Снижение тонуса и упругости кожи</h3>
+            <p>После резкого похудения, родов или возрастных изменений, когда коже нужна плотность, подтяжка и эластичность.</p>
+          </article>
+          <article class="massage-why-item">
+            <h3>Скованность в спине и мышечная усталости</h3>
+            <p>После интенсивных тренировок, долгого вождения или работы за компьютером, когда мышцам нужно глубокое расслабление.</p>
+          </article>
+          <article class="massage-why-item">
+            <h3>Подготовка к важному событию или отпуску</h3>
+            <p>Когда нужно быстро привести тело в форму, убрать лишнюю воду и подтянуть контуры за короткий курс сеансов.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark" id="faq">
+      <div class="wrap">
+        <h2>Часто задаваемые вопросы</h2>
+        <div class="gold-line"></div>
+        <div class="massage-faq-list">
+          <details class="massage-faq-item">
+            <summary>Остаются ли синяки и сосудистые звёздочки после процедуры?</summary>
+            <div class="massage-faq-answer">
+              <p>Нет. Синяки появляются только при грубой работе или неправильно выставленной мощности. Наши специалисты с медицинским образованием индивидуально настраивают силу вакуума под плотность и чувствительность вашей кожи, поэтому сеанс проходит бережно и не оставляет следов.</p>
+            </div>
+          </details>
+          <details class="massage-faq-item">
+            <summary>Это больно? Какие ощущения во время сеанса?</summary>
+            <div class="massage-faq-answer">
+              <p>Процедура проходит комфортно и ощущается как глубокое, интенсивное разминание и приятное тепло. В начале сеанса мастер подбирает оптимальный режим под ваши ощущения — дискомфорта или резкой боли быть не должно.</p>
+            </div>
+          </details>
+          <details class="massage-faq-item">
+            <summary>Сколько сеансов нужно пройти для видимого результата?</summary>
+            <div class="massage-faq-answer">
+              <p>Первую лёгкость и уменьшение отёков вы почувствуете уже после 1–2 визитов. Для стойкой коррекции объёмов, разглаживания рельефа и подтяжки кожи рекомендуется курс из 8–12 процедур с интервалом 2–3 дня.</p>
+            </div>
+          </details>
+          <details class="massage-faq-item">
+            <summary>Как подготовиться к сеансу вакуумного массажа?</summary>
+            <div class="massage-faq-answer">
+              <p>Специальной сложной подготовки не требуется. Желательно не есть за 1,5–2 часа до процедуры и выпить стакан чистой воды перед визитом (и после него) — это поможет организму быстрее запустить лимфодренаж и вывести лишнюю жидкость.</p>
+            </div>
+          </details>
+          <details class="massage-faq-item">
+            <summary>Можно ли совмещать вакуумный массаж с другими процедурами (RF-лифтингом, кавитацией)?</summary>
+            <div class="massage-faq-answer">
+              <p>Да, сочетание методик усиливает результат в несколько раз. Например, кавитация или RF-лифтинг отлично работают в паре с вакуумным массажем, который ускоряет выведение продуктов распада и подтягивает кожу. На встрече специалист подскажет оптимальную схему.</p>
+            </div>
+          </details>
+          <details class="massage-faq-item">
+            <summary>Какие есть противопоказания к вакуумному массажу?</summary>
+            <div class="massage-faq-answer">
+              <p>К основным противопоказаниям относятся варикозное расширение вен в стадии обострения и тромбофлебит, беременность и период лактации, онкологические заболевания, острые воспаления или повреждения кожи в зоне воздействия, повышенная температура тела и гипертония в стадии обострения.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="price">
+      <div class="wrap">
+        <h2>Прайс</h2>
+        <div class="gold-line"></div>
+        <div class="price-layout">
+          <div class="price-visual">
+            <img src="../images/massage-price.jpg?v=1" alt="Прайс вакуумного массажа">
+          </div>
+          <div class="price-aside">
+            <h3 class="price-aside-title">Ваш путь к идеальному силуэту начинается здесь</h3>
+            <a class="btn btn-gold" href="tel:+79990000000">Связаться с администратором</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark" id="contacts">
+      <div class="wrap contact-grid">
+        <div>
+          <p class="eyebrow">Запись</p>
+          <h2 style="text-align:left">Записаться на вакуумный массаж</h2>
+          <div class="gold-line" style="margin-left:0"></div>
+          <p class="lead">Администратор расскажет о процедуре, подскажет точную цену и запишет вас в удобное время.</p>
+          <p><strong>Москва</strong><br>м. Пражская, ТЦ «Колумбус»<br>Ежедневно с 10:00 до 21:00</p>
+          <p><a href="tel:+79990000000">+7 (999) 000-00-00</a></p>
+        </div>
+        <form class="card form" id="lead-form">
+          <div class="fields">
+            <label>Имя<input type="text" name="name" autocomplete="name"></label>
+            <label>Телефон<input type="tel" name="phone" class="js-phone" placeholder="+7 (___) ___-__-__" required></label>
+            <label class="hp-field" aria-hidden="true">Сайт<input type="text" name="website" class="js-hp" tabindex="-1" autocomplete="off"></label>
+            <button class="btn btn-gold" type="submit">Подобрать удобное время</button>
+          </div>
+          <p class="form-success">Спасибо. Заявка принята. Мы свяжемся с вами в ближайшее время.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <div id="app-footer"></div>
+  <script src="../layout.js?v=27"></script>
+  <script src="../app.js?v=22"></script>
+</body>
+</html>
